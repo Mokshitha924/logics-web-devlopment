@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logic Gate</title>
+<link rel="stylesheet" href="logic.css">
+</head>
+<body>
+<h1>Logic Gates</h1>
+<select class="ip1" id="input1">
+<option value="0">0</option>
+<option value="1">1</option>
+</select>
+<select class="ip2" id="input2">
+<option value="0">0</option>
+<option value="1">1</option>
+</select>
+<select class="gtype" id="gatetype">
+<option value="and">AND</option>
+<option value="or">OR</option>
+<option value="xor">XOR</option>
+</select>
+<button class="btn"onclick="gateoutput()">O/P</button>
+<input class="op" id="output">
+<script>
+function gateoutput()
+{
+var i1=document.getElementById("input1").value;
+var i2=document.getElementById("input2").value;
+var gt=document.getElementById("gatetype").value;
+var o;
+switch(gt)
+{
+case "and":o=i1&i2;
+break;
+case "or":o=i1|i2;
+break;
+case "xor":o=i1^i2;
+}
+document.getElementById("output").value=o;
+}
+</script>
+</body>
+</html>
